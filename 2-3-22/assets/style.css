@@ -1,0 +1,48 @@
+/* Regola Generale CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Container con proprietà Flex 
+dettiamo altezza e larghezza */
+.container {
+  display: flex;
+  flex-direction: row; /* Disposizione del main axis, ovvero verso X orizzontale */
+  /* flex-direction: column; */ /* ruota gli assi di 90 gradi e disponde in modo centrato verso lato Y verticale, Quindi Main diventa verticale e Cross orizzontale */
+  background-color: aquamarine;
+  width: 600px;
+  height: 400px;
+}
+
+/* Primo rettangolo di prova, senza alcuna regola posiziona tutti e 3 a fianco di default */
+/* Poichè flex divide in modo equo, anche con 100% si mettono l'uno accanto all'altro */
+.square {
+  /* width: 100%; */
+  width: 100px; 
+  height: 100px;
+  margin: 5px; /* con margin 5px divide sempre in modo equo */ 
+}
+
+.bg-red {
+  background-color: red;
+}
+.bg-blue {
+  background-color: blue;
+}
+.bg-purple {
+  background-color: purple;
+}
+
+/* Classe di utility per dare la disposizione flex a qualsiasi container*/
+.d-flex {
+  display: flex;
+}
+
+.bg-yellow {
+  background-color: yellow;
+  width: 20px;
+  height: 20px;
+  border: 1px solid black;
+}

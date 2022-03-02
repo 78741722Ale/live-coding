@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Primo ese - transition */
+/* Secondo ese - transition */
+
+.Square {
+  width: 100px;
+  height: 100px;
+  background-color: aquamarine;
+  /* filter: grayscale(20%); - primo ese */
+  /* transition: all 4s; - primo ese */
+  position: absolute;
+  /* Secondo Esercizio translate è il nome , 10s è il tempo, linear è come si esegue */
+  /* animation: translate 5s linear; */
+}
+
+/* Primo ese - transition */
+
+/* .Square:hover {
+background-color: blue;
+filter: opacity(0.5);
+} */
+
+/* Secondo Esercizio 
+0% prima posizione. 
+25% - rimane sopra a 0 e si sposta da sx del 100% con il calc, contando
+il suo quadratino. 
+50% - sposta a DX, in basso.
+75% - sposta a SX ma sempre in basso.
+100% - ritorna alla posizione di partenza. 
+
+@keyframes translate {
+    0% {
+        top: 0;
+        left: 0;
+    }
+    25% {
+        top: 0;
+        left: calc( 100% - 100px ) ;   
+    }
+    50% {
+        top: calc( 100% - 100px ) ;   
+        left: calc( 100% - 100px ) ;     
+    }
+    75% {
+        top: calc( 100% - 100px ) ; 
+        left:0;
+    }
+    100% {
+        top: 0;
+        left: 0; 
+    }
+}
+*/
+
+/* Terzo esercizio - filtri */
+
+/* Container che mantiene le celle */
+.Container {
+  width: 90vw;
+  margin: 2rem auto;
+}
+
+/* Container con regola clearfix */
+.Container::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Colonna da 33%
+tieni bene a mente la regola del 100% che la userai sempre */
+.col_33 {
+  float: left;
+  width: calc(100% / 3);
+}
+
+/* Regola per le immagini, in questo caso per tutte le img */
+img {
+  max-width: 100%;
+  filter: grayscale(1);
+}
+
+/* come cambia l'immagine quando ci passiamo sopra  */
+.col_33:hover img {
+  filter: grayscale(0);
+  /* filter: invert(1); */
+}
